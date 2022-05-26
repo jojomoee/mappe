@@ -16,16 +16,19 @@ function init() {
     btn[i].addEventListener("click", () => {
       nav.style.right = "0";
       nav.style.left = "auto";
-      nav.style.backgroundColor = "red";
+      nav.style.backgroundColor = "#ED6565";
       navState = true;
       console.log(navState);
+      gsap.from(nav, {
+        x: window.innerWidth,
+      });
 
       gsap.fromTo(
         btn[i],
         {
           height: "10vw",
         },
-        { height: "90vw", duration: 0.5 }
+        { height: "70vh", marginBottom: "20vw", duration: 0.5 }
       );
 
       for (let j = 0; j < i; j++) {
@@ -33,11 +36,13 @@ function init() {
           btn[j],
           {
             height: "10vw",
-            marginBottom: "10vw",
+            marginBottom: "5vw",
           },
           { height: "0vw", marginBottom: "0vw", duration: 0.5 }
         );
       }
+      window.scrollTo(0, 0);
+      gsap.from(document.getElementById("header-big"), { visibility: "visible", duration: 10 });
     });
   }
 
@@ -49,26 +54,29 @@ function init() {
       listWrapper.style.display = "";
       nav.style.right = "auto";
       nav.style.left = "0";
-      nav.style.backgroundColor = "green";
+      nav.style.backgroundColor = "#6DBC60";
 
+      gsap.from(nav, {
+        x: -window.innerWidth,
+      });
 
       for (let i = 0; i < btn.length; i++) {
-        gsap.to(
-          btn[i],
-          { height: "10vw",marginBottom:'10vw', duration: 1 }
-        );
+        gsap.to(btn[i], {
+          height: "10vw",
+          marginBottom: "5vw",
+          duration: 0.5,
+        });
 
-
-//        for (let j = 0; j < i; j++) {
-//          gsap.fromTo(
-//            btn[j],
-//            {
-//              height: "0vw",
-//              marginBottom: "0vw",
-//            },
-//            { height: "10vw", marginBottom: "10vw", duration: 0.5 }
-//          );
-//        }
+        //        for (let j = 0; j < i; j++) {
+        //          gsap.fromTo(
+        //            btn[j],
+        //            {
+        //              height: "0vw",
+        //              marginBottom: "0vw",
+        //            },
+        //            { height: "10vw", marginBottom: "10vw", duration: 0.5 }
+        //          );
+        //        }
       }
     } else {
       nav.style.display = "none";

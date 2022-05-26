@@ -10,24 +10,26 @@ body {
   display: flex;
 }
 //
-main {
-	margin-top:10vw;
+
+header {
+	height: 10vw;
+	display: flex;
+	flex-flow: row;
+	align-items: left;
+}
+#header-big{
+	width: 80vw;
+	color: $white;
+	text-align: left;
+	visibility: hidden;
 }
 #icon {
   height: 10vw;
   width: 10vw;
-  background: green;
-  top:0;
-  left:0;
+  background: #6DBC60;
+  top: 0;
+  left: 0;
   position: fixed;
-}
-.icon_overlay_on {
-  display: flex;
-  align-self: center;
-  margin-top: 10vw;
-  height: 50vh;
-  width: 80vw;
-  background-color: $white;
 }
 #list-wrapper {
   height: auto;
@@ -36,31 +38,20 @@ main {
   align-items: center;
   flex-flow: column;
 }
-
 .list-btn {
-  height: 10vw;
+  height: 20vh;
   width: 100%;
-  margin-bottom: 10vw;
+  margin-bottom: 5vh;
   background: $white;
   border: none;
   display: flex;
   justify-content: space-between;
 }
-.overlay_on {
-  height: calc(100vh - 10vw);
-  width: 80vw;
-  background: $white;
+
+footer {
   display: flex;
-  justify-content: right;
+  margin-top: 100vh;
+  height: 100vh;
+  width: 100vw;
 }
 
-.wrapper_off {
-  height: 0px;
-  width: 0px;
-}
-footer {
-	display: flex;
-	margin-top: 100vh;
-	height: 100vh;
-	width: 100vw;
-}
