@@ -50,49 +50,6 @@ function init() {
     nav.style.display = "";
     listWrapper.style.pointerEvents = "";
   });
-
-  window.addEventListener(
-    "keydown",
-    function (event) {
-      if (event.defaultPrevented) {
-        console.log("not allowed");
-      }
-
-      switch (event.key) {
-        case "ArrowDown":
-          window.scrollBy(0, window.innerWidth / 5);
-          break;
-        case "ArrowUp":
-          window.scrollBy(0, -window.innerWidth / 5);
-          // Do something for "up arrow" key press.
-          break;
-        case "ArrowLeft":
-          listItemOnclick();
-          console.log(document.documentElement.scrollTop);
-		  console.log(window.innerWidth);
-		  console.log(window.innerHeight);
-
-          break;
-        case "Right": // IE/Edge specific value
-        case "ArrowRight":
-          // Do something for "right arrow" key press.
-          break;
-        case "Enter":
-          // Do something for "enter" or "return" key press.
-          break;
-        case "Esc": // IE/Edge specific value
-        case "Escape":
-          // Do something for "esc" key press.
-          break;
-        default:
-          return; // Quit when this doesn't handle the key event.
-      }
-
-      // Cancel the default action to avoid it being handled twice
-      event.preventDefault();
-    },
-    true
-  );
 }
 
 document.addEventListener("DOMContentLoaded", init, false);
