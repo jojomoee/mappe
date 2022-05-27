@@ -2,6 +2,7 @@
 
 body {
   background-color: $black;
+
   align-items: center;
   flex-flow: column;
   box-sizing: border-box;
@@ -10,36 +11,59 @@ body {
   display: flex;
 }
 //
-
-header {
-	height: 10vw;
-	display: flex;
-	flex-flow: row;
-	align-items: left;
+main {
 }
-#header-big{
-	width: 80vw;
-	color: $white;
-	text-align: left;
-	visibility: hidden;
+ul li {
+  list-style-type: none;
+}
+header {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 90vw;
+  background-color: $black;
+  z-index: 100;
+  position: fixed;
+}
+#header-txt {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  width: 90vw;
+  height: 16vh;
+  color: $black;
+  text-align: left;
+  background-color: $white;
+  visibility: hidden;
 }
 #icon {
-  height: 10vw;
-  width: 10vw;
-  background: #6DBC60;
-  top: 0;
-  left: 0;
+  height: 125px;
+  width: 125px;
+  background: #6dbc60;
+  left: 5vw;
+  position: fixed;
+}
+#nav-anim {
+  height: 125px;
+  width: 125px;
+  background: #6dbc60;
+  left: 5vw;
   position: fixed;
 }
 #list-wrapper {
+  margin-top: 25vh;
   height: auto;
-  width: 80vw;
+  width: 90vw;
   display: flex;
   align-items: center;
   flex-flow: column;
+  overflow: hidden;
+  padding-left: 0;
+  z-index: -99;
 }
-.list-btn {
-  height: 20vh;
+.list-item {
+  height: 15vh;
   width: 100%;
   margin-bottom: 5vh;
   background: $white;
@@ -49,9 +73,8 @@ header {
 }
 
 footer {
+  height: 15vh;
   display: flex;
-  margin-top: 100vh;
-  height: 100vh;
-  width: 100vw;
+  flex-flow: row;
+  align-items: left;
 }
-

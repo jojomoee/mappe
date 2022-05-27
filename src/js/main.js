@@ -1,48 +1,28 @@
 import "../scss/style.scss";
 import gsap from "gsap";
+import { animHeaderNav } from "./text";
+import { stylingNav } from "./text";
+import { animListButton } from "./text";
 
 function init() {
-  const btn = document.getElementsByClassName("list-btn");
+  const btn = document.getElementsByClassName("list-item");
   const listWrapper = document.getElementById("list-wrapper");
   const nav = document.getElementById("icon");
 
   //list item click
 
   let navState = false;
-
-  console.log(navState);
+  let selectedButton = 2;
 
   for (let i = 0; i < btn.length; i++) {
     btn[i].addEventListener("click", () => {
-      nav.style.right = "0";
-      nav.style.left = "auto";
-      nav.style.backgroundColor = "#ED6565";
+      stylingNav(nav);
+      animHeaderNav("#header-txt", "#nav-anim", "#icon");
+      animListButton(btn, i, "#list-wrapper");
       navState = true;
-      console.log(navState);
-      gsap.from(nav, {
-        x: window.innerWidth,
-      });
-
-      gsap.fromTo(
-        btn[i],
-        {
-          height: "10vw",
-        },
-        { height: "70vh", marginBottom: "20vw", duration: 0.5 }
-      );
-
-      for (let j = 0; j < i; j++) {
-        gsap.fromTo(
-          btn[j],
-          {
-            height: "10vw",
-            marginBottom: "5vw",
-          },
-          { height: "0vw", marginBottom: "0vw", duration: 0.5 }
-        );
-      }
-      window.scrollTo(0, 0);
-      gsap.from(document.getElementById("header-big"), { visibility: "visible", duration: 10 });
+	  selectedButton = i;
+	  window.scrollTo(0, 0);
+	 
     });
   }
 
@@ -53,11 +33,12 @@ function init() {
     if (navState === true) {
       listWrapper.style.display = "";
       nav.style.right = "auto";
-      nav.style.left = "0";
+      nav.style.left = "5vw";
       nav.style.backgroundColor = "#6DBC60";
 
+      document.getElementById("header-txt").style.visibility = "hidden";
       gsap.from(nav, {
-        x: -window.innerWidth,
+        width: 0,
       });
 
       for (let i = 0; i < btn.length; i++) {
@@ -66,17 +47,6 @@ function init() {
           marginBottom: "5vw",
           duration: 0.5,
         });
-
-        //        for (let j = 0; j < i; j++) {
-        //          gsap.fromTo(
-        //            btn[j],
-        //            {
-        //              height: "0vw",
-        //              marginBottom: "0vw",
-        //            },
-        //            { height: "10vw", marginBottom: "10vw", duration: 0.5 }
-        //          );
-        //        }
       }
     } else {
       nav.style.display = "none";
