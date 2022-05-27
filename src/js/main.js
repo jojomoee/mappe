@@ -1,48 +1,46 @@
 import "../scss/style.scss";
 import gsap from "gsap";
-import { animHeaderNav } from "./text";
-import { stylingNav } from "./text";
-import { animListButton } from "./text";
+
+import {
+  animHeaderNav,
+  stylingNav,
+  animListItem,
+  stylingCloseButton,
+  stylingButton,
+  toggleButton,
+} from "./animations.js";
 
 function init() {
-  const btn = document.getElementsByClassName("list-item");
+  const listItem = document.getElementsByClassName("list-item");
   const listWrapper = document.getElementById("list-wrapper");
   const nav = document.getElementById("icon");
-
-  //list item click
+  const itemHeadng = document.querySelectorAll("h1");
 
   let navState = false;
-  let selectedButton = 2;
-
-  for (let i = 0; i < btn.length; i++) {
-    btn[i].addEventListener("click", () => {
+  for (let i = 0; i < listItem.length; i++) {
+    listItem[i].addEventListener("click", () => {
       stylingNav(nav);
       animHeaderNav("#header-txt", "#nav-anim", "#icon");
-      animListButton(btn, i, "#list-wrapper");
+      animListItem(listItem, i, "#list-wrapper");
+      toggleButton("#btn-right");
+      toggleButton("#btn-left");
+
+      //let styleProp = ["left", "right"];
+      // stylingButton("btn-right", styleProp[0], styleProp[1]);
       navState = true;
-	  selectedButton = i;
-	  window.scrollTo(0, 0);
-	 
+      window.scrollTo(0, 0);
     });
   }
-
-  //open overlay nav click
-
+  //CLOSE LIST-ITEM and TOGGLE CARD
   nav.addEventListener("click", () => {
-    //CLOSE BUTTON
     if (navState === true) {
-      listWrapper.style.display = "";
-      nav.style.right = "auto";
-      nav.style.left = "5vw";
-      nav.style.backgroundColor = "#6DBC60";
-
-      document.getElementById("header-txt").style.visibility = "hidden";
+      stylingCloseButton(listWrapper, nav);
       gsap.from(nav, {
-        width: 0,
+        height: 0,
       });
 
-      for (let i = 0; i < btn.length; i++) {
-        gsap.to(btn[i], {
+      for (let i = 0; i < listItem.length; i++) {
+        gsap.to(listItem[i], {
           height: "10vw",
           marginBottom: "5vw",
           duration: 0.5,
