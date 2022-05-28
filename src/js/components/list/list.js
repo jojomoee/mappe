@@ -15,10 +15,13 @@ export function createList() {
 
     let header = dataObj.projects[item].header;
     let h1 = div.appendChild(document.createElement("h1"));
+	h1.setAttribute('class', 'project-header')  
     h1.appendChild(document.createTextNode(header));
 
     let info = dataObj.projects[item].info;
     let h2 = div.appendChild(document.createElement("h2"));
+
+	h2.setAttribute('class', 'project-type')  
 	h2.appendChild(document.createTextNode(info));
 
     list.appendChild(li);

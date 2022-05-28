@@ -16,11 +16,13 @@ div {
   overflow: hidden;
   display: flex;
   flex-flow: row;
+  height: 15vh;
 }
 h1 {
   font-family: SolideMirage-Etroit;
   font-size: 10rem;
-  line-height: 150%;
+  line-height: 7rem;
+  text-align: center;
   margin: 0;
   padding: 0;
 
@@ -29,6 +31,7 @@ h1 {
     line-height: 5rem;
   }
 }
+
 ul {
   margin-top: 5vw;
   display: flex;
