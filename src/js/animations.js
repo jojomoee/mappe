@@ -40,6 +40,28 @@ export function animHeaderNav(id_header_txt, id_nav_overlay, id_nav) {
   );
 }
 // animListItem LIST-ITEM-COLLAPSE attached to LIST-ITEM
+
+export function listItemAnimation(listItems) {
+
+  for (let item of listItems) {
+    item.addEventListener("click", () => {
+      gsap.fromTo(
+        item,
+        {
+          height: "10vw",
+        },
+        { height: "90vh", width: "90vw", marginBottom:"0", duration: 0.5 }
+      );
+	  let itemPos = Array.from(listItems).indexOf(item);		 
+      let unselectedItems = Array.from(listItems);
+		unselectedItems.splice(itemPos, 1);
+		console.log(unselectedItems);
+	  for (let unselectedItem of unselectedItems) {
+		  unselectedItem.style.display ="none";
+	  }
+
+    });
+
 export function animListItem(list_item, i, id_list_wrapper) {
   gsap.fromTo(
     list_item[i],
@@ -60,6 +82,7 @@ export function animListItem(list_item, i, id_list_wrapper) {
       },
       { height: "0vw", marginBottom: "0vw", duration: 0.5 }
     );
+
   }
 }
 //TEXT
@@ -82,8 +105,7 @@ export function toggleButton(button_on_list) {
     },
     "sync"
   );
-	tl.reversed();
-}
+
 
 export function stylingButton(id_button_on_list, styleProp, styleProp2) {
   const button_on_list = document.getElementById(id_button_on_list);

@@ -9,10 +9,11 @@ body {
   padding: 0;
   display: flex;
 }
-//
+
 ul li {
   list-style-type: none;
 }
+
 header {
   height: 22vh;
   display: flex;
@@ -71,7 +72,9 @@ header {
 }
 
 #list-wrapper {
-  margin-top: 22vh;
+
+  margin-top: 5vh;
+
   height: auto;
   width: 90vw;
   display: flex;
