@@ -9,16 +9,11 @@ body {
   padding: 0;
   display: flex;
 }
-//
-<<<<<<< Updated upstream
-=======
-main {
-	margin: 0;
-	padding: 0;
-}
+
 ul li {
   list-style-type: none;
 }
+
 header {
   height: 22vh;
   display: flex;
@@ -29,53 +24,84 @@ header {
   z-index: 100;
   position: fixed;
 }
->>>>>>> Stashed changes
 
-header {
-	height: 10vw;
-	display: flex;
-	flex-flow: row;
-	align-items: left;
+.list-item-l-r-btn {
+  position: absolute;
+  height: 40vh;
+  width: 5vw;
+  border: none;
+  background-color: red;
+  visibility: hidden;
 }
-#header-big{
-	width: 80vw;
-	color: $white;
-	text-align: left;
-	visibility: hidden;
+#btn-left {
+  right: auto;
+  left: 5vw;
+  top: 35vh;
+}
+
+#btn-right {
+  left: auto;
+  right: 5vw;
+  top: 35vh;
+}
+
+#header-txt {
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  width: 90vw;
+  height: 18vh;
+  color: $black;
+  text-align: left;
+  background-color: $white;
+  visibility: hidden;
 }
 #icon {
-  height: 10vw;
-  width: 10vw;
-  background: #6DBC60;
-  top: 0;
-  left: 0;
+  height: 125px;
+  width: 125px;
+  background: $green;
+  left: 5vw;
   position: fixed;
 }
+#nav-anim {
+  height: 125px;
+  width: 125px;
+  background: $green;
+  left: 5vw;
+  position: fixed;
+}
+
 #list-wrapper {
-<<<<<<< Updated upstream
-=======
+
   margin-top: 5vh;
->>>>>>> Stashed changes
+
   height: auto;
-  width: 80vw;
+  width: 90vw;
   display: flex;
   align-items: center;
   flex-flow: column;
-}
-.list-btn {
-  height: 20vh;
-  width: 100%;
-  margin-bottom: 5vh;
-  background: $white;
-  border: none;
-  display: flex;
-  justify-content: space-between;
+  overflow: hidden;
+  padding-left: 0;
+  z-index: -99;
+
+  .list-item {
+    height: 15vh;
+    width: 100%;
+    margin-bottom: 5vh;
+    background: $white;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project-heading {
+    display: none;
+  }
 }
 
 footer {
+  height: 15vh;
   display: flex;
-  margin-top: 100vh;
-  height: 100vh;
-  width: 100vw;
+  flex-flow: row;
+  align-items: left;
 }
-

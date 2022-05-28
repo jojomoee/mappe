@@ -40,6 +40,7 @@ export function animHeaderNav(id_header_txt, id_nav_overlay, id_nav) {
   );
 }
 // animListItem LIST-ITEM-COLLAPSE attached to LIST-ITEM
+
 export function listItemAnimation(listItems) {
 
   for (let item of listItems) {
@@ -60,6 +61,28 @@ export function listItemAnimation(listItems) {
 	  }
 
     });
+
+export function animListItem(list_item, i, id_list_wrapper) {
+  gsap.fromTo(
+    list_item[i],
+    {
+      height: "10vw",
+    },
+    { height: "70vh", width: "90vw", marginBottom: "20vw", duration: 0.5 }
+  );
+
+  gsap.to(id_list_wrapper, { width: "90vw" });
+
+  for (let j = 0; j < i; j++) {
+    gsap.fromTo(
+      list_item[j],
+      {
+        height: "10vw",
+        marginBottom: "5vw",
+      },
+      { height: "0vw", marginBottom: "0vw", duration: 0.5 }
+    );
+
   }
 }
 //TEXT
@@ -82,7 +105,7 @@ export function toggleButton(button_on_list) {
     },
     "sync"
   );
-}
+
 
 export function stylingButton(id_button_on_list, styleProp, styleProp2) {
   const button_on_list = document.getElementById(id_button_on_list);

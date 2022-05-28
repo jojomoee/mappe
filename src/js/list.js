@@ -5,10 +5,12 @@ var options = [
     ];
 
 export function makeUL(obj) {
+==
     // Create the list element:
     var list = document.createElement('ul');
 
     for (var i = 0; i < array.length; i++) {
+
         var item = document.createElement('li');
 		for (var j = 0; j < item.length; j++){
 			var header = document.createElement('h2');
@@ -17,6 +19,7 @@ export function makeUL(obj) {
 
         // Set its contents:
         item.appendChild(document.createTextNode(obj[i]));
+
 
         // Add it to the list:
         list.appendChild(item);
