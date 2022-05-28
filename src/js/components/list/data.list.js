@@ -1,26 +1,33 @@
 export const dataObj = {
-  project1: {
-    header: "Projekt1",
-    info: "Video 1",
-  },
+  projects: [
+    {
+      id: "projekt1",
+      header: "AUSTAUSCH",
+      info: "Video 1",
+    },
 
-  project2: {
-    header: "Projekt2",
-    info: "Video 2",
-  },
+    {
+      id: "projekt3",
+      header: "Projekt2",
+      info: "Video 2",
+    },
 
-  project3: {
-    header: "Projekt3",
-    info: "Video 3",
-  },
+    {
+      id: "projekt3",
+      header: "Projekt3",
+      info: "Video 3",
+    },
 
-  project4: {
-    header: "Projekt4",
-    info: "Konzept 1",
-  },
+    {
+      id: "projekt4",
+      header: "Projekt4",
+      info: "Konzept 1",
+    },
 
-  project5: {
-    header: "Projekt5",
-    info: "Konzept 2",
-  },
+    {
+      id: "projekt5",
+      header: "Projekt5",
+      info: "Konzept 2",
+    },
+  ],
 };

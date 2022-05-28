@@ -1,13 +1,49 @@
 @import "constants";
+@import "media-queries-mixins";
 
 body {
   background-color: $black;
+  display: flex;
   align-items: center;
-  flex-flow: column;
+  justify-content: center;
   box-sizing: border-box;
+  padding-left: 0;
   margin: 0;
   padding: 0;
-  display: flex;
+  padding-left: 0;
 }
+div {
+  overflow: hidden;
+  display: flex;
+  flex-flow: row;
+}
+h1 {
+  font-family: SolideMirage-Etroit;
+  font-size: 10rem;
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
 
-
+  @include xs {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+ul {
+  margin-top: 5vw;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  height: 100vh;
+  width: 100vw;
+  padding-left: 0; // needs to be set to avoid 40px, idk
+}
+li {
+  margin-bottom: 5vh;
+  background-color: $white;
+  width: 90vw;
+  display: flex;
+  flex-flow: row;
+  list-style-type: none;
+  justify-content: space-between;
+}
