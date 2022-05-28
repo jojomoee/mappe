@@ -10,6 +10,26 @@ body {
   display: flex;
 }
 //
+<<<<<<< Updated upstream
+=======
+main {
+	margin: 0;
+	padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+header {
+  height: 22vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 90vw;
+  background-color: $black;
+  z-index: 100;
+  position: fixed;
+}
+>>>>>>> Stashed changes
 
 header {
 	height: 10vw;
@@ -32,6 +52,10 @@ header {
   position: fixed;
 }
 #list-wrapper {
+<<<<<<< Updated upstream
+=======
+  margin-top: 5vh;
+>>>>>>> Stashed changes
   height: auto;
   width: 80vw;
   display: flex;
