@@ -1,5 +1,12 @@
 export const dataObj = {
   projects: [
+
+    {
+
+      id: "projekt0",
+      header: "UebermicH",
+      info: "ICH",
+    },
     {
       id: "projekt1",
       header: "AUSTAUSCH",
@@ -9,7 +16,7 @@ export const dataObj = {
     {
       id: "projekt3",
       header: "Projekt2",
-      info: "Video 2",
+      info: "(Video2)",
     },
 
     {
