@@ -20,8 +20,7 @@ export function createList() {
 
     let info = dataObj.projects[item].info;
     let h2 = div.appendChild(document.createElement("h2"));
-
-	h2.setAttribute('class', 'project-type')  
+	h2.setAttribute('class','project-type' );
 	h2.appendChild(document.createTextNode(info));
 
     list.appendChild(li);

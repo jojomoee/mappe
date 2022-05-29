@@ -15,8 +15,9 @@ body {
 div {
   overflow: hidden;
   display: flex;
-  flex-flow: row;
   height: 15vh;
+  width: 90vw;
+  justify-content: space-between;
 }
 h1 {
   font-family: SolideMirage-Etroit;
@@ -31,7 +32,16 @@ h1 {
     line-height: 5rem;
   }
 }
+h2 {
 
+  font-family: SolideMirage-Etroit;
+  font-size: 10rem;
+  line-height: 7rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+	display: flex;
+}
 ul {
   margin-top: 5vw;
   display: flex;

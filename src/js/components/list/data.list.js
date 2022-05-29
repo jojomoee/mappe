@@ -3,7 +3,7 @@ export const dataObj = {
     {
       id: "projekt1",
       header: "AUSTAUSCH",
-      info: "Video 1",
+      info: "(Video1)",
     },
 
     {
