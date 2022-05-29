@@ -13,7 +13,6 @@ body {
   padding-left: 0;
 }
 div {
-  overflow: hidden;
   display: flex;
   height: 15vh;
   width: 90vw;
@@ -21,12 +20,12 @@ div {
 }
 h1 {
   font-family: SolideMirage-Etroit;
-  font-size: 10rem;
-  line-height: 7rem;
-  text-align: center;
+  font-size: 8rem;
+  line-height: 5.25rem;
+  color: $black;
   margin: 0;
   padding: 0;
-
+  z-index:1;
   @include xs {
     font-size: 5rem;
     line-height: 5rem;
@@ -35,12 +34,27 @@ h1 {
 h2 {
 
   font-family: SolideMirage-Etroit;
+  font-weight: 10;
+  color: $green;
   font-size: 10rem;
   line-height: 7rem;
   text-align: center;
   margin: 0;
   padding: 0;
-	display: flex;
+  display: flex;
+
+  @include xs {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+#projekt0{
+	background-color:$black;
+
+	h1 {
+	font-weight: 400;
+	color: $white;
+	}
 }
 ul {
   margin-top: 5vw;
@@ -50,6 +64,7 @@ ul {
   height: 100vh;
   width: 100vw;
   padding-left: 0; // needs to be set to avoid 40px, idk
+
 }
 li {
   margin-bottom: 5vh;
@@ -59,4 +74,6 @@ li {
   flex-flow: row;
   list-style-type: none;
   justify-content: space-between;
+  visibility: hidden;
+  overflow: hidden;
 }

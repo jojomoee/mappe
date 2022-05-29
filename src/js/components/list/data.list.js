@@ -4,24 +4,24 @@ export const dataObj = {
     {
 
       id: "projekt0",
-      header: "UebermicH",
+      header: "BEWERBUNGSMAPPE_JOHANNES_MOEHRL_",
       info: "ICH",
     },
     {
       id: "projekt1",
-      header: "AUSTAUSCH",
+      header: "AUSTAUSCH_VIDEO_1_",
       info: "(Video1)",
     },
 
     {
       id: "projekt3",
-      header: "Projekt2",
+      header: "ZEITAUFNAHME_VIDEO_2_",
       info: "(Video2)",
     },
 
     {
       id: "projekt3",
-      header: "Projekt3",
+      header: "ATMUNG_VIDEO_3_",
       info: "Video 3",
     },
 
