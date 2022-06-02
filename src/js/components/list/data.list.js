@@ -2,39 +2,38 @@ export const dataObj = {
   projects: [
 
     {
-
       id: "projekt0",
-      header: "BEWERBUNGSMAPPE_JOHANNES_MOEHRL_",
-      info: "ICH",
+      header: "JOHANNES_MOEHRL",
+      info: "JOHANNES MÖHRL →",
     },
     {
       id: "projekt1",
-      header: "AUSTAUSCH_VIDEO_1_",
-      info: "(Video1)",
+      header: "VIDEO_1_AUSTAUSCH",
+      info: "VIDEO-1-AUSTAUSCH →",
     },
 
     {
       id: "projekt3",
-      header: "ZEITAUFNAHME_VIDEO_2_",
-      info: "(Video2)",
+      header: "VIDEO_2_ZEITAUFNAHME",
+      info: "VIDEO",
     },
 
     {
       id: "projekt3",
-      header: "ATMUNG_VIDEO_3_",
-      info: "Video 3",
+      header: "VIDEO_3_ATMUNG",
+      info: "oder fährst",
     },
 
     {
       id: "projekt4",
-      header: "Projekt4",
-      info: "Konzept 1",
+      header: "KONZEPT_1_DRUCKFRISCH",
+      info: "du nur",
     },
 
     {
       id: "projekt5",
-      header: "Projekt5",
-      info: "Konzept 2",
+      header: "KONZEPT_2_AUDIOVISUALISIERUNG",
+      info: "",
     },
   ],
 };

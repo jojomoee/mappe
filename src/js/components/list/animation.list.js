@@ -4,6 +4,7 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+
 //Animates elements from middle to 90vw, when opening the site
 export async function openingAnimation(collection) {
   for (let li of collection) {
@@ -15,7 +16,7 @@ export async function openingAnimation(collection) {
     });
     tl.to(li, {
       duration: 2,
-      width: "90vw",
+      width: "100vw",
       autoAlpha: 1,
     });
     await sleep(500);
@@ -35,6 +36,7 @@ export async function h1MovingAnimation(collection) {
   }
 
   for (let container of collection) {
+
     //Get Index of the container-collection
     let index = [...collection].indexOf(container);
     //Use function getContainerWidth, and apply index to it, to get each
@@ -48,17 +50,20 @@ export async function h1MovingAnimation(collection) {
         window.innerWidth || 0
       ) * 0.05;
     xOffset += xSpacing;
-	//GSAP animation
+    let tl = gsap.timeline({ repeat: -1 });
+    //GSAP animation
     tl.to(container, {
       duration: 10,
-      x: -xOffset, //VH fehlt noch
+      x: -xOffset,
+      ease: "Sine.easeOut",
     });
 
     tl.to(container, {
       x: 0,
       duration: 10,
+
+      ease: "Sine.easeOut",
     });
 
-    await sleep(5000);
   }
 }
