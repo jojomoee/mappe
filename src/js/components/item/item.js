@@ -1,29 +1,18 @@
+export function createItemOfList() {
+  let projectContainerColl =
+    document.getElementsByClassName("project-container");
+  for (let projectContainer of projectContainerColl) {
+    let backButton = document.createElement("button");
+    backButton.setAttribute("class", "close-btn");
 
-//import { dataObj } from "./data.list";
+    let contentContainer = document.createElement("div");
+    contentContainer.setAttribute("class", "content-container");
 
-//creates All elements of list.
-//
+    let contentDescription = document.createElement("div");
+    contentDescription.setAttribute("class", "content-description");
 
-import gsap from "gsap";
+    projectContainer.append(backButton, contentContainer, contentDescription);
+  }
 
-export function createItem() {
-	
-	//wenn ich auf das Item clicke soll es sich vergößern
-	//Hier will ich es befüllen
-	let container = document.getElementsByClassName('project-container');
-	
-	for(let item of container) {
-		item.addEventListener('click', () => {
-
-			let tl = gsap.timeline({});
-			tl.to(tl, {
-				height: "100vh"
-			})
-
-		})
-	}
+  return projectContainerColl;
 }
-
-
-// Add the contents of options[0] to #foo:
-//document.querySelector("body").appendChild(createList());
