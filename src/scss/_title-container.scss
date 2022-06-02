@@ -1,0 +1,19 @@
+//TITLE CONTAINER
+#projekt0 {
+  background-color: $black;
+  &:hover {
+    background-color: $black;
+
+    h1 {
+      display: none;
+    }
+    h2 {
+      color: $white;
+    }
+  }
+
+  h1 {
+    font-weight: 400;
+    color: $white;
+  }
+}

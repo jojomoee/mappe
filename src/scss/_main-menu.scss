@@ -1,0 +1,97 @@
+ul {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding-left: 0; // needs to be set to avoid 40px, idk
+}
+
+li {
+  margin-top: 5vh;
+  background-color: $white;
+  width: 100vw;
+  display: flex;
+  flex-flow: row;
+  list-style-type: none;
+  justify-content: space-between;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.project-container {
+  display: flex;
+  height: 15vh;
+  width: 100vw;
+
+  &:hover {
+    h1 {
+      display: none;
+    }
+  }
+}
+
+h1 {
+  font-family: SolideMirage-Etroit;
+  font-size: 10rem;
+  line-height: 5.25rem;
+  color: $black;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+
+  @include xs {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+
+h2 {
+  font-family: SolideMirage-Etroit;
+  display: flex;
+  visibility: hidden;
+  font-weight: 200;
+  text-align: center;
+  padding-bottom: 2.5vh;
+  align-self: center;
+  color: $black;
+  font-size: 3rem;
+  line-height: 3rem;
+  visibility: visible;
+}
+
+.close-btn {
+  position: absolute;
+  display: flex;
+  border: none;
+  background-color: #ED6565;
+  height: 20vh;
+  width: 20vw;
+  visibility: hidden;
+  right: 0;
+  top: 0;
+}
+
+.content-description {
+  position:absolute;
+  display: flex;
+  border: none;
+  background-color: blue;
+  right:0;
+  top: 20vh;
+  height: 80vh;
+  width: 20vw;
+}
+
+.content-container {
+  position: absolute;
+  display: flex;
+  border: none;
+  background-color: yellow;
+  height: 75px;
+  left:0;
+  width: 80vw;
+  height:80vh;
+  top:20vh;
+}
