@@ -7,13 +7,18 @@ export function expandLiOnClick(collection) {
     item.addEventListener("click", () => {
 
       item.children[0].children[2].style.visibility = "visible";
+      item.children[0].children[3].style.visibility = "visible";
+      item.children[0].children[4].style.visibility = "visible";
+
       let tl = gsap.timeline();
       tl.to(item, {
         height: "90vh",
         marginTop: 0,
       });
+
       let selectedItem = itemArr.indexOf(item);
       itemArr.splice(selectedItem, 1);
+
       for (let unselectedItems of itemArr) {
         let tl = gsap.timeline();
         tl.to(unselectedItems, {
@@ -39,3 +44,5 @@ export function hoverEffect(collection) {
 	});
   }
 }
+
+

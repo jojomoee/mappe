@@ -4,10 +4,13 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-
 //Animates elements from middle to 90vw, when opening the site
 export async function openingAnimation(collection) {
+  let liList = [];
+
   for (let li of collection) {
+    liList.push(li);
+    liList[0].style.marginTop = "0";
     let tl = gsap.timeline({});
     tl.from(li, {
       duration: 2,
@@ -36,22 +39,23 @@ export async function h1MovingAnimation(collection) {
   }
 
   for (let container of collection) {
-
-    //Get Index of the container-collection
+    //Get Index of the header-container-collection
     let index = [...collection].indexOf(container);
     //Use function getContainerWidth, and apply index to it, to get each
     //Elements width at position
     let containerWidth = getContainerWidth(collection)[index];
     let xOffset = containerWidth - screen.width;
-    //container is only 90vw, so 10vw needs to be subtracted
-    let xSpacing =
-      Math.max(
-        document.documentElement.clientWidth || 0,
-        window.innerWidth || 0
-      ) * 0.05;
-    xOffset += xSpacing;
-    let tl = gsap.timeline({ repeat: -1 });
+	//if margins get set to the container
+    //container is only 90vw, so 10vw needs to be subtracted.
+    // let xSpacing =
+    //   Math.max(
+    //     document.documentElement.clientWidth || 0,
+    //     window.innerWidth || 0
+    //   ) * 0.05;
+    // xOffset += xSpacing;
+	//
     //GSAP animation
+    let tl = gsap.timeline({ repeat: -1 });
     tl.to(container, {
       duration: 10,
       x: -xOffset,
@@ -65,5 +69,6 @@ export async function h1MovingAnimation(collection) {
       ease: "Sine.easeOut",
     });
 
+    await sleep(500);
   }
 }

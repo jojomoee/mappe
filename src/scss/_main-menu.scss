@@ -9,7 +9,7 @@ ul {
 }
 
 li {
-  margin-top: 5vh;
+  margin-top: 3.5vh;
   background-color: $white;
   width: 100vw;
   display: flex;
@@ -18,6 +18,8 @@ li {
   justify-content: space-between;
   visibility: hidden;
   overflow: hidden;
+  //needs to be relative to children 
+  position:relative;
 }
 
 .project-container {
@@ -61,37 +63,44 @@ h2 {
   visibility: visible;
 }
 
+//only visible when item is opened
 .close-btn {
   position: absolute;
   display: flex;
   border: none;
   background-color: #ED6565;
-  height: 20vh;
-  width: 20vw;
+  //text-height
+  height: calc(2.5vh + 5.25rem);
+  width: 10vw;
   visibility: hidden;
   right: 0;
   top: 0;
 }
 
+//only visible when item is opened
 .content-description {
   position:absolute;
   display: flex;
   border: none;
   background-color: blue;
-  right:0;
-  top: 20vh;
+  left:0;
+  top: calc(2.5vh + 5.25rem);
   height: 80vh;
   width: 20vw;
+  overflow:auto;
+  visibility: hidden;
 }
 
+//only visible when item is opened
 .content-container {
   position: absolute;
   display: flex;
   border: none;
   background-color: yellow;
-  height: 75px;
-  left:0;
-  width: 80vw;
+  right:10vw;
+  width: 70vw;
   height:80vh;
-  top:20vh;
+  top: calc(2.5vh + 5.25rem);
+  overflow:auto;
+  visibility: hidden;
 }

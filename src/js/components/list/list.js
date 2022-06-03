@@ -1,4 +1,4 @@
-import { dataObj } from "./data.list";
+import { dataObj } from "../data";
 
 //creates All elements of list.
 export function createList() {
@@ -13,7 +13,7 @@ export function createList() {
     div.setAttribute("class", "project-container");
 
     let id = dataObj.projects[item].id;
-    li.setAttribute("id", id);
+    li.setAttribute("id", "project" + id);
 
     let header = dataObj.projects[item].header;
     let h1 = div.appendChild(document.createElement("h1"));
@@ -32,5 +32,3 @@ export function createList() {
 }
 
 
-// Add the contents of options[0] to #foo:
-//document.querySelector("body").appendChild(createList());
